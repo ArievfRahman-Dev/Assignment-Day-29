@@ -1,0 +1,30 @@
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-wrapper {
+  display: flex;
+  animation: scrollLeft 15s linear infinite;
+}
+
+.scroll-wrapper img {
+  height: 3rem; /* Set the height according to your need */
+  margin-right: 16px;
+}
+
+/* Add a maximum of 5 visible images in the container */
+.scroll-container img {
+  flex-shrink: 0;
+}
